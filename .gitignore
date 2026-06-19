@@ -1,0 +1,13 @@
+# Root-level ignores (each app also has its own .gitignore)
+node_modules/
+.env
+.env.local
+*.log
+.DS_Store
+
+# Build output
+backend/dist/
+frontend/.next/
+
+# Local design-tool extraction artifacts
+sift_design_extract/

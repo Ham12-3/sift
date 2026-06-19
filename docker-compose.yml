@@ -1,0 +1,14 @@
+# Local MongoDB for development. Start with: docker compose up -d
+# The backend's default MONGODB_URI (mongodb://localhost:27017/sift) targets this.
+services:
+  mongo:
+    image: mongo:7
+    container_name: sift-mongo
+    restart: unless-stopped
+    ports:
+      - '27017:27017'
+    volumes:
+      - sift_mongo_data:/data/db
+
+volumes:
+  sift_mongo_data:
